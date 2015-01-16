@@ -42,10 +42,10 @@ export default class DataSource {
       'getList',
       params,
 
-      () => this.callApi(this.api.list, params)
-      .then(this.getListDecode.bind(this))
-      .then(this.assertArray.bind(this))
-      .then(this.toModelList.bind(this))
+      () => this.api.list(params)
+        .then(this.getListDecode.bind(this))
+        .then(this.assertArray.bind(this))
+        .then(this.toModelList.bind(this))
     )
   }
 
@@ -54,10 +54,14 @@ export default class DataSource {
       'get',
       params,
 
-      () => this.callApi(this.api.item, params)
+      () => this.api.item(params)
       .then(this.getItemDecode.bind(this))
       .then(this.toModel.bind(this))
     )
+  }
+
+  resolveLinkedItems(items) {
+    //TODO
   }
 
   assertArray(data) {

@@ -3,7 +3,7 @@ import Cache from 'Cache';
 
 import ApiResource from 'http.es6/ApiResource';
 
-import Hedgehog from './Hedgehog';
+import Hedgehog from './models/Hedgehog';
 
 
 

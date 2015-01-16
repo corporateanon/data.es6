@@ -1,7 +1,9 @@
 import chai from 'chai';
 import spies from 'chai-spies';
 import HedgehogsDataSource from './data-sources/HedgehogsDataSource';
-import Hedgehog from './data-sources/Hedgehog';
+import Hedgehog from './data-sources/models/Hedgehog';
+
+import './linked.test';
 
 var { expect } = chai;
 chai.use(spies);
